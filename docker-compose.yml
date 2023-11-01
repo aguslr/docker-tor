@@ -1,0 +1,9 @@
+version: '2'
+services:
+  tor:
+    container_name: tor
+    build:
+      context: .
+    restart: unless-stopped
+    ports:
+      - 9050:9050/tcp
