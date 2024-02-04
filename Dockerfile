@@ -14,7 +14,7 @@ COPY torrc /etc/tor/torrc
 EXPOSE 9050/tcp
 
 HEALTHCHECK --interval=5m --timeout=5s \
-  CMD timeout 2 curl -sfo /dev/null --socks5-hostname 127.0.0.1:9050 'https://check.torproject.org'
+  CMD timeout 2 curl -sfo /dev/null --socks5-hostname 127.0.0.1:9050 'http://check.torproject.org'
 
 USER debian-tor
 
