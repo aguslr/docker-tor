@@ -9,7 +9,7 @@ RUN \
   -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /var/lib/apt/lists/*
 
-COPY torrc /etc/tor/torrc
+COPY rootfs /
 
 EXPOSE 9050/tcp
 
